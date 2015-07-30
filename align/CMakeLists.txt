@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( align )
+find_package( OpenCV REQUIRED )
+add_executable( align align.cpp )
+target_link_libraries( align ${OpenCV_LIBS} )
