@@ -29,3 +29,5 @@ gphoto2 --capture-image-and-download --filename 3.cr2
 
 cd align
 ./align 1000 1000 2000 2000
+
+cd ../mydepth/./getdm
