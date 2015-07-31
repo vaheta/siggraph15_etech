@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vaheta/Desktop/siggraph/Servo/depth
+CMAKE_SOURCE_DIR = /home/vaheta/Desktop/siggraph/Servo/for_git/depth
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vaheta/Desktop/siggraph/Servo/depth
+CMAKE_BINARY_DIR = /home/vaheta/Desktop/siggraph/Servo/for_git/depth
 
 # Include any dependencies generated for this target.
 include CMakeFiles/depth.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/depth.dir/flags.make
 
 CMakeFiles/depth.dir/openni_capture.cpp.o: CMakeFiles/depth.dir/flags.make
 CMakeFiles/depth.dir/openni_capture.cpp.o: openni_capture.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vaheta/Desktop/siggraph/Servo/depth/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/depth.dir/openni_capture.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/depth.dir/openni_capture.cpp.o -c /home/vaheta/Desktop/siggraph/Servo/depth/openni_capture.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/depth.dir/openni_capture.cpp.o -c /home/vaheta/Desktop/siggraph/Servo/for_git/depth/openni_capture.cpp
 
 CMakeFiles/depth.dir/openni_capture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/depth.dir/openni_capture.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/vaheta/Desktop/siggraph/Servo/depth/openni_capture.cpp > CMakeFiles/depth.dir/openni_capture.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/vaheta/Desktop/siggraph/Servo/for_git/depth/openni_capture.cpp > CMakeFiles/depth.dir/openni_capture.cpp.i
 
 CMakeFiles/depth.dir/openni_capture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/depth.dir/openni_capture.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/vaheta/Desktop/siggraph/Servo/depth/openni_capture.cpp -o CMakeFiles/depth.dir/openni_capture.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/vaheta/Desktop/siggraph/Servo/for_git/depth/openni_capture.cpp -o CMakeFiles/depth.dir/openni_capture.cpp.s
 
 CMakeFiles/depth.dir/openni_capture.cpp.o.requires:
 .PHONY : CMakeFiles/depth.dir/openni_capture.cpp.o.requires
@@ -130,6 +130,6 @@ CMakeFiles/depth.dir/clean:
 .PHONY : CMakeFiles/depth.dir/clean
 
 CMakeFiles/depth.dir/depend:
-	cd /home/vaheta/Desktop/siggraph/Servo/depth && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vaheta/Desktop/siggraph/Servo/depth /home/vaheta/Desktop/siggraph/Servo/depth /home/vaheta/Desktop/siggraph/Servo/depth /home/vaheta/Desktop/siggraph/Servo/depth /home/vaheta/Desktop/siggraph/Servo/depth/CMakeFiles/depth.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vaheta/Desktop/siggraph/Servo/for_git/depth && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vaheta/Desktop/siggraph/Servo/for_git/depth /home/vaheta/Desktop/siggraph/Servo/for_git/depth /home/vaheta/Desktop/siggraph/Servo/for_git/depth /home/vaheta/Desktop/siggraph/Servo/for_git/depth /home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles/depth.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/depth.dir/depend
 

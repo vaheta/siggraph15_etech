@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vaheta/Desktop/siggraph/Servo/depth/openni_capture.cpp" "/home/vaheta/Desktop/siggraph/Servo/depth/CMakeFiles/depth.dir/openni_capture.cpp.o"
+  "/home/vaheta/Desktop/siggraph/Servo/for_git/depth/openni_capture.cpp" "/home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles/depth.dir/openni_capture.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

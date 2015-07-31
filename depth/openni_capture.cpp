@@ -195,8 +195,6 @@ int main( int argc, char* argv[] )
 
     cout << "done." << endl;
 
-    cout << cv::getBuildInformation() << endl;
-
     if( !capture.isOpened() )
     {
         cout << "Can not open a capture object." << endl;

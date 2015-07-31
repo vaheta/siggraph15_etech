@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/vaheta/Desktop/siggraph/Servo/depth/openni_capture.cpp
+/home/vaheta/Desktop/siggraph/Servo/for_git/depth/openni_capture.cpp
 opencv2/highgui/highgui.hpp
-/home/vaheta/Desktop/siggraph/Servo/depth/opencv2/highgui/highgui.hpp
+/home/vaheta/Desktop/siggraph/Servo/for_git/depth/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/vaheta/Desktop/siggraph/Servo/depth/opencv2/imgproc/imgproc.hpp
+/home/vaheta/Desktop/siggraph/Servo/for_git/depth/opencv2/imgproc/imgproc.hpp
 iostream
 -
 
