@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( getdm )
+find_package( OpenCV REQUIRED )
+add_executable( getdm getdm.cpp )
+target_link_libraries( getdm ${OpenCV_LIBS} )

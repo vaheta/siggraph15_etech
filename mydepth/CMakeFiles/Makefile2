@@ -47,44 +47,44 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vaheta/Desktop/siggraph/Servo/for_git/depth
+CMAKE_SOURCE_DIR = /home/vaheta/Desktop/siggraph/Servo/mydepth
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vaheta/Desktop/siggraph/Servo/for_git/depth
+CMAKE_BINARY_DIR = /home/vaheta/Desktop/siggraph/Servo/mydepth
 
 #=============================================================================
-# Target rules for target CMakeFiles/depth.dir
+# Target rules for target CMakeFiles/getdm.dir
 
 # All Build rule for target.
-CMakeFiles/depth.dir/all:
-	$(MAKE) -f CMakeFiles/depth.dir/build.make CMakeFiles/depth.dir/depend
-	$(MAKE) -f CMakeFiles/depth.dir/build.make CMakeFiles/depth.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles  1
-	@echo "Built target depth"
-.PHONY : CMakeFiles/depth.dir/all
+CMakeFiles/getdm.dir/all:
+	$(MAKE) -f CMakeFiles/getdm.dir/build.make CMakeFiles/getdm.dir/depend
+	$(MAKE) -f CMakeFiles/getdm.dir/build.make CMakeFiles/getdm.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vaheta/Desktop/siggraph/Servo/mydepth/CMakeFiles  1
+	@echo "Built target getdm"
+.PHONY : CMakeFiles/getdm.dir/all
 
 # Include target in all.
-all: CMakeFiles/depth.dir/all
+all: CMakeFiles/getdm.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/depth.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/depth.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles 0
-.PHONY : CMakeFiles/depth.dir/rule
+CMakeFiles/getdm.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vaheta/Desktop/siggraph/Servo/mydepth/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/getdm.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vaheta/Desktop/siggraph/Servo/mydepth/CMakeFiles 0
+.PHONY : CMakeFiles/getdm.dir/rule
 
 # Convenience name for target.
-depth: CMakeFiles/depth.dir/rule
-.PHONY : depth
+getdm: CMakeFiles/getdm.dir/rule
+.PHONY : getdm
 
 # clean rule for target.
-CMakeFiles/depth.dir/clean:
-	$(MAKE) -f CMakeFiles/depth.dir/build.make CMakeFiles/depth.dir/clean
-.PHONY : CMakeFiles/depth.dir/clean
+CMakeFiles/getdm.dir/clean:
+	$(MAKE) -f CMakeFiles/getdm.dir/build.make CMakeFiles/getdm.dir/clean
+.PHONY : CMakeFiles/getdm.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/depth.dir/clean
+clean: CMakeFiles/getdm.dir/clean
 .PHONY : clean
 
 #=============================================================================

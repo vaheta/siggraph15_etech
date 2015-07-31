@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vaheta/Desktop/siggraph/Servo/for_git/depth
+CMAKE_SOURCE_DIR = /home/vaheta/Desktop/siggraph/Servo/mydepth
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vaheta/Desktop/siggraph/Servo/for_git/depth
+CMAKE_BINARY_DIR = /home/vaheta/Desktop/siggraph/Servo/mydepth
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles /home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vaheta/Desktop/siggraph/Servo/mydepth/CMakeFiles /home/vaheta/Desktop/siggraph/Servo/mydepth/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vaheta/Desktop/siggraph/Servo/for_git/depth/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vaheta/Desktop/siggraph/Servo/mydepth/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -99,41 +99,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named depth
+# Target rules for targets named getdm
 
 # Build rule for target.
-depth: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 depth
-.PHONY : depth
+getdm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 getdm
+.PHONY : getdm
 
 # fast build rule for target.
-depth/fast:
-	$(MAKE) -f CMakeFiles/depth.dir/build.make CMakeFiles/depth.dir/build
-.PHONY : depth/fast
+getdm/fast:
+	$(MAKE) -f CMakeFiles/getdm.dir/build.make CMakeFiles/getdm.dir/build
+.PHONY : getdm/fast
 
-openni_capture.o: openni_capture.cpp.o
-.PHONY : openni_capture.o
+getdm.o: getdm.cpp.o
+.PHONY : getdm.o
 
 # target to build an object file
-openni_capture.cpp.o:
-	$(MAKE) -f CMakeFiles/depth.dir/build.make CMakeFiles/depth.dir/openni_capture.cpp.o
-.PHONY : openni_capture.cpp.o
+getdm.cpp.o:
+	$(MAKE) -f CMakeFiles/getdm.dir/build.make CMakeFiles/getdm.dir/getdm.cpp.o
+.PHONY : getdm.cpp.o
 
-openni_capture.i: openni_capture.cpp.i
-.PHONY : openni_capture.i
+getdm.i: getdm.cpp.i
+.PHONY : getdm.i
 
 # target to preprocess a source file
-openni_capture.cpp.i:
-	$(MAKE) -f CMakeFiles/depth.dir/build.make CMakeFiles/depth.dir/openni_capture.cpp.i
-.PHONY : openni_capture.cpp.i
+getdm.cpp.i:
+	$(MAKE) -f CMakeFiles/getdm.dir/build.make CMakeFiles/getdm.dir/getdm.cpp.i
+.PHONY : getdm.cpp.i
 
-openni_capture.s: openni_capture.cpp.s
-.PHONY : openni_capture.s
+getdm.s: getdm.cpp.s
+.PHONY : getdm.s
 
 # target to generate assembly for a file
-openni_capture.cpp.s:
-	$(MAKE) -f CMakeFiles/depth.dir/build.make CMakeFiles/depth.dir/openni_capture.cpp.s
-.PHONY : openni_capture.cpp.s
+getdm.cpp.s:
+	$(MAKE) -f CMakeFiles/getdm.dir/build.make CMakeFiles/getdm.dir/getdm.cpp.s
+.PHONY : getdm.cpp.s
 
 # Help Target
 help:
@@ -141,12 +141,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... depth"
 	@echo "... edit_cache"
+	@echo "... getdm"
 	@echo "... rebuild_cache"
-	@echo "... openni_capture.o"
-	@echo "... openni_capture.i"
-	@echo "... openni_capture.s"
+	@echo "... getdm.o"
+	@echo "... getdm.i"
+	@echo "... getdm.s"
 .PHONY : help
 
 
