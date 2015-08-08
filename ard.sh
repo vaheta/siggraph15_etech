@@ -30,4 +30,13 @@ gphoto2 --capture-image-and-download --filename 3.cr2
 cd align
 ./align 1000 1000 2000 2000
 
-cd ../mydepth/./getdm
+cd ..
+
+mv align/1.tiff matlab/data
+mv align/2.tiff matlab/data
+mv align/3.tiff matlab/data
+
+cd mydepth/
+./getdm
+cd ..
+mv dm.ppm matlab/data

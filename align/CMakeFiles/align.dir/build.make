@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vaheta/Desktop/siggraph/Servo/align
+CMAKE_SOURCE_DIR = /home/vaheta/Desktop/siggraph/Servo/for_git/align
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vaheta/Desktop/siggraph/Servo/align
+CMAKE_BINARY_DIR = /home/vaheta/Desktop/siggraph/Servo/for_git/align
 
 # Include any dependencies generated for this target.
 include CMakeFiles/align.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/align.dir/flags.make
 
 CMakeFiles/align.dir/align.cpp.o: CMakeFiles/align.dir/flags.make
 CMakeFiles/align.dir/align.cpp.o: align.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/vaheta/Desktop/siggraph/Servo/align/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vaheta/Desktop/siggraph/Servo/for_git/align/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/align.dir/align.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/align.dir/align.cpp.o -c /home/vaheta/Desktop/siggraph/Servo/align/align.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/align.dir/align.cpp.o -c /home/vaheta/Desktop/siggraph/Servo/for_git/align/align.cpp
 
 CMakeFiles/align.dir/align.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/align.dir/align.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/vaheta/Desktop/siggraph/Servo/align/align.cpp > CMakeFiles/align.dir/align.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/vaheta/Desktop/siggraph/Servo/for_git/align/align.cpp > CMakeFiles/align.dir/align.cpp.i
 
 CMakeFiles/align.dir/align.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/align.dir/align.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/vaheta/Desktop/siggraph/Servo/align/align.cpp -o CMakeFiles/align.dir/align.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/vaheta/Desktop/siggraph/Servo/for_git/align/align.cpp -o CMakeFiles/align.dir/align.cpp.s
 
 CMakeFiles/align.dir/align.cpp.o.requires:
 .PHONY : CMakeFiles/align.dir/align.cpp.o.requires
@@ -130,6 +130,6 @@ CMakeFiles/align.dir/clean:
 .PHONY : CMakeFiles/align.dir/clean
 
 CMakeFiles/align.dir/depend:
-	cd /home/vaheta/Desktop/siggraph/Servo/align && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vaheta/Desktop/siggraph/Servo/align /home/vaheta/Desktop/siggraph/Servo/align /home/vaheta/Desktop/siggraph/Servo/align /home/vaheta/Desktop/siggraph/Servo/align /home/vaheta/Desktop/siggraph/Servo/align/CMakeFiles/align.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vaheta/Desktop/siggraph/Servo/for_git/align && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vaheta/Desktop/siggraph/Servo/for_git/align /home/vaheta/Desktop/siggraph/Servo/for_git/align /home/vaheta/Desktop/siggraph/Servo/for_git/align /home/vaheta/Desktop/siggraph/Servo/for_git/align /home/vaheta/Desktop/siggraph/Servo/for_git/align/CMakeFiles/align.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/align.dir/depend
 

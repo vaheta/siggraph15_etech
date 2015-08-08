@@ -1,1 +1,1 @@
-/home/vaheta/Desktop/siggraph/Servo/align/CMakeFiles/align.dir
+/home/vaheta/Desktop/siggraph/Servo/for_git/align/CMakeFiles/align.dir

@@ -102,7 +102,6 @@ int main(int argc, char** argv )
 
 	Rect ROI21 (x1 + int(RT012.at<double>(0,2)) + int(RT112.at<double>(0,2)), y1 + int(RT012.at<double>(1,2)) + int(RT112.at<double>(1,2)), x2-x1, y2-y1);
 	Rect ROI31 (x1 + int(RT013.at<double>(0,2)) + int(RT113.at<double>(0,2)), y1 + int(RT013.at<double>(1,2)) + int(RT113.at<double>(1,2)), x2-x1, y2-y1);
-
 	
 	im01 = imread("../1.tiff");
 	im02 = imread("../2.tiff");

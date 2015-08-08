@@ -1,0 +1,94 @@
+addpath('./library/'); 
+addpath('./data'); 
+
+importfiletiff('data/1.tiff');
+importfiletiff('data/2.tiff');
+importfiletiff('data/3.tiff');
+importfileppm('data/dm.ppm');
+
+graych(:,:,1) = rgb2gray(x1);
+graych(:,:,2) = rgb2gray(x2);
+graych(:,:,3) = rgb2gray(x3);
+
+
+%% Runme_Fuser
+
+%addpath('./library/helper_functions/d2n_kdtree/'); 
+addpath('./library/'); 
+addpath('./data'); 
+
+% Defining the refractive index. We use the same value for all the scenes
+refr_idx = 1.5;
+
+% (Scene specific)
+% This value is used to define the maximum angle of polarizer used in the
+% measurements. It is assumed that the starting angle was 0 and the step is
+% equal for all the measurements (e.g. 0, 30, 60, 90, 120, 150).
+max_angle = 90;
+
+% (Scene specific) 
+% Defining the coordinates on the photos and on the depth map to crop the object and resize
+% ratio to resize the cropped photos.
+% For depth map the cropping region in z-direction (depth, in mm) is also 
+% defined, everything out of that zone is changed to NaN.
+
+im_x_begin = 1;
+im_x_end = 1000;
+im_y_begin = 1;
+im_y_end = 1000;
+resize_ratio = 0.5;
+
+dm_x_begin = 219;
+dm_x_end = 276;
+dm_y_begin = 125;
+dm_y_end = 224;
+dm_z_begin = 0;
+dm_z_end = 900;
+
+% Cropping the object from the photos so that it is aligned with the 
+% depth map and resizing the image to about 1000px 
+% on the biggest side so that the processing is fast enough.
+
+grch = graych(im_y_begin:im_y_end, im_x_begin:im_x_end, :);
+grch = imresize(grch, resize_ratio);
+
+% Changing max_angle to be a correct input for polarization2normals
+% function. Calculating estimates for azimuth angle, zenith angle and degree
+% of polarization from images.
+
+max_angle = max_angle + max_angle/(size(grch,3) - 1);
+[azimuth_hat, zenith_hat, rho] = polarization2normals(grch, max_angle, refr_idx);
+
+% Creating the mask of the object
+
+objmask = dm(dm_y_begin:dm_y_end, dm_x_begin:dm_x_end);
+objmask(objmask>dm_z_end) = NaN;
+objmask(objmask <= dm_z_begin) = NaN;
+objmask = ones(size(objmask)) - isnan(objmask);
+objmask(objmask == 0) = NaN;
+
+% Cropping the part of the depth map and azimuth/zenith maps that were
+% generated using the depth map.
+
+zenith_smooth  = pi - zenith_smooth;
+azimuth_smooth = (azimuth_smooth(dm_y_begin:dm_y_end, dm_x_begin:dm_x_end)).*objmask;
+azimuth_smooth = imresize( azimuth_smooth, size(azimuth_hat) ,'nearest');
+zenith_smooth = fliplr(zenith_smooth(dm_y_begin:dm_y_end, dm_x_begin:dm_x_end)).*objmask;
+zenith_smooth = imresize( zenith_smooth, size(zenith_hat) ,'nearest');
+
+% Running fuser (the function that does dismabiguation of azimuth angle).
+
+[ azimuth_disamb, ch_mask ] = fuser( azimuth_hat, zenith_hat, rho, azimuth_smooth, zenith_smooth); 
+
+% Calculating normals from disambiguated azimuth and polarization zenith.
+
+[poltof_grad, poltof_norms] = normals(-azimuth_disamb, zenith_hat); 
+
+% Calculating normals from polarization azimuth and polarization zenith.
+
+[pol_grad, pol_norms] = normals(azimuth_hat, zenith_hat); 
+
+% Saving the output.
+
+save('./data/input_for_integrator.mat','azimuth_disamb','azimuth_hat','azimuth_smooth',...
+    'dm','objmask','pol_grad','pol_norms','poltof_grad','poltof_norms','zenith_hat','zenith_smooth','rho','refr_idx'); 
