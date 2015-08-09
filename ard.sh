@@ -20,6 +20,11 @@ echo "g" > /dev/ttyACM0
 sleep 0.3
 gphoto2 --capture-image-and-download --filename 3.cr2
 
+cd mydepth/
+./getdm
+cd ..
+mv dm.ppm matlab/data
+
 ./dcraw -w -H 0 -q 3 1.cr2
 ./dcraw -w -H 0 -q 3 2.cr2
 ./dcraw -w -H 0 -q 3 3.cr2
@@ -36,7 +41,12 @@ mv align/1.tiff matlab/data
 mv align/2.tiff matlab/data
 mv align/3.tiff matlab/data
 
-cd mydepth/
-./getdm
-cd ..
-mv dm.ppm matlab/data
+rm 1.cr2
+rm 2.cr2
+rm 3.cr2
+rm 1.ppm
+rm 2.ppm
+rm 3.ppm
+rm 1.tiff
+rm 2.tiff
+rm 3.tiff 
