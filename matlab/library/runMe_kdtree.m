@@ -1,7 +1,7 @@
 clc; clear; close all; 
 
 % place this file in library
-addpath('./d2n_kdtree/'); 
+addpath('./helper_functions/d2n_kdtree/'); 
 
 filename = 'norms_clean_corner.mat'; 
 load(filename); 

@@ -5,7 +5,7 @@ importfiletiff('data/1.tiff');
 importfiletiff('data/2.tiff');
 importfiletiff('data/3.tiff');
 importfileppm('data/dm.ppm');
-
+dm = double(dm);
 graych(:,:,1) = rgb2gray(x1);
 graych(:,:,2) = rgb2gray(x2);
 graych(:,:,3) = rgb2gray(x3);
@@ -13,7 +13,7 @@ graych(:,:,3) = rgb2gray(x3);
 
 %% Runme_Fuser
 
-%addpath('./library/helper_functions/d2n_kdtree/'); 
+addpath('./library/helper_functions/d2n_kdtree/'); 
 addpath('./library/'); 
 addpath('./data'); 
 
@@ -32,18 +32,20 @@ max_angle = 90;
 % For depth map the cropping region in z-direction (depth, in mm) is also 
 % defined, everything out of that zone is changed to NaN.
 
-im_x_begin = 1;
-im_x_end = 1000;
-im_y_begin = 1;
-im_y_end = 1000;
-resize_ratio = 0.5;
+[imsize_y, imsize_x, imsize_z] = size(x1);
 
-dm_x_begin = 219;
-dm_x_end = 276;
-dm_y_begin = 125;
-dm_y_end = 224;
-dm_z_begin = 0;
-dm_z_end = 900;
+im_x_begin = 1;
+im_x_end = imsize_x;
+im_y_begin = 1;
+im_y_end = imsize_y;
+resize_ratio = 1;
+
+dm_x_begin = 347;
+dm_x_end = 380;
+dm_y_begin = 118;
+dm_y_end = 151;
+dm_z_begin = 1000;
+dm_z_end = 1200;
 
 % Cropping the object from the photos so that it is aligned with the 
 % depth map and resizing the image to about 1000px 
@@ -58,6 +60,7 @@ grch = imresize(grch, resize_ratio);
 
 max_angle = max_angle + max_angle/(size(grch,3) - 1);
 [azimuth_hat, zenith_hat, rho] = polarization2normals(grch, max_angle, refr_idx);
+zenith_hat = medfilt2 (zenith_hat, [5,5]);
 
 % Creating the mask of the object
 
@@ -66,6 +69,10 @@ objmask(objmask>dm_z_end) = NaN;
 objmask(objmask <= dm_z_begin) = NaN;
 objmask = ones(size(objmask)) - isnan(objmask);
 objmask(objmask == 0) = NaN;
+
+% 
+[NX, NY, NZ] = d2n_kdtree (dm);
+[azimuth_smooth, zenith_smooth] = cartesian_to_spherical(NX,NY,NZ);
 
 % Cropping the part of the depth map and azimuth/zenith maps that were
 % generated using the depth map.
@@ -91,4 +98,4 @@ zenith_smooth = imresize( zenith_smooth, size(zenith_hat) ,'nearest');
 % Saving the output.
 
 save('./data/input_for_integrator.mat','azimuth_disamb','azimuth_hat','azimuth_smooth',...
-    'dm','objmask','pol_grad','pol_norms','poltof_grad','poltof_norms','zenith_hat','zenith_smooth','rho','refr_idx'); 
+    'dm','pol_grad','pol_norms','poltof_grad','poltof_norms','zenith_hat','zenith_smooth','rho','refr_idx'); 

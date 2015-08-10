@@ -17,13 +17,13 @@ D_kinect = dmcrop;
 % load('face_ND_scan.mat') % D_gt
 % D_gt = imresize(D_gt, [height, width]);
 
-maskImg = rgb2gray(imread('norms_face_mask.png'));
-
-objmask = zeros(size(maskImg));
-objmask(maskImg >128) = 1;
-% D_gt = D_gt .* objmask;
-D_ours = D_ours .* objmask;
-D_kinect = D_kinect .* objmask;
+% maskImg = rgb2gray(imread('norms_face_mask.png'));
+% 
+% objmask = zeros(size(maskImg));
+% objmask(maskImg >128) = 1;
+% % D_gt = D_gt .* objmask;
+% D_ours = D_ours .* objmask;
+% D_kinect = D_kinect .* objmask;
 
 %% Surface
 viewAng = [53 30];

@@ -34,6 +34,7 @@ void loop() {
     }
     if (angle>=90)
     {
+      delay(5000);
       myservo.write(0);
     }
   }

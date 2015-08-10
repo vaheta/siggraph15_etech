@@ -1,9 +1,5 @@
-function [NX, NY, NZ] = d2n_kdtree(dm, radius) 
+function [NX, NY, NZ] = d2n_kdtree(dm) 
 % input is dm in mm
-
-if nargin<2
-    radius = 0.02; 
-end
 
 %---------convert depth map to meters
 dm = dm./1000; % convert depth map to meters. 
@@ -19,7 +15,7 @@ Mask = ~isnan(dm);
 %---------call microsoft function for plane principal analysis
 radius= 0.02; 
 view_point= [0,0,0]; 
-[NX,NY,NZ] = compute_norm( X, Y, Z, radius, view_point );
+[NX,NY,NZ] = surfnorm( X,Y,Z);
 
 %---------display surface normals
 N = zeros(yres, xres, 3);
